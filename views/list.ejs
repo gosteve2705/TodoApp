@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <h1> <%= kindofday  %></h1>
-
-    <ul>
+    <div class="box" id="heading">
+      <h1> <%= kindofday  %></h1>
+    </div>
+    <div class="box" >
       <% for(task in newTask){ %>
-        <li> <%= newTask[task] %></li>
-      <% } %>
-    </ul>
+      <div class="item">
+        <input type="checkbox">
+          <p> <%= newTask[task] %></p>
+      </div>
+        <% } %>
 
-    <form  action="/" method="post">
-      <label for="">Enter Task</label>
-      <input type="text" name="task" >
-      <button type="submit" name="button">Add Task</button>
-    </form>
+        <form  class="item" action="/" method="post">
+
+          <input type="text" name="task"  placeholder="New Task" autocomplete="off" >
+          <button type="submit" name="button">+</button>
+        </form>
+    </div>
+
+
+
+
   </body>
 </html>

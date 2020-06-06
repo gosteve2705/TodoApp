@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1> <%= kindofday  %></h1>
+
+    <ul>
+      <% for(task in newTask){ %>
+        <li> <%= newTask[task] %></li>
+      <% } %>
+    </ul>
+
+    <form  action="/" method="post">
+      <label for="">Enter Task</label>
+      <input type="text" name="task" >
+      <button type="submit" name="button">Add Task</button>
+    </form>
+  </body>
+</html>

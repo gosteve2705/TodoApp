@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const date =  require(__dirname + "/date.js");
 
-const tasks = ['buy food','cook food','eat food'];
+const tasks = [];
 const worktasks = [];
 
 

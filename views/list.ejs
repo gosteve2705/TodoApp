@@ -1,15 +1,7 @@
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-
-    <title>Todo List</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
+<%- include('header'); -%>
     <div class="box" id="heading">
-      <h1> <%= kindofday  %></h1>
+      <h1> <%= listTitle  %></h1>
     </div>
     <div class="box" >
       <% for(task in newTask){ %>
@@ -22,12 +14,7 @@
         <form  class="item" action="/" method="post">
 
           <input type="text" name="task"  placeholder="New Task" autocomplete="off" >
-          <button type="submit" name="button">+</button>
+          <button type="submit" name="tasksList" value=<%= listTitle %>>+</button>
         </form>
     </div>
-
-
-
-
-  </body>
-</html>
+<%- include('footer'); -%>
